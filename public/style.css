@@ -1,0 +1,1395 @@
+/* General Body Styling */
+body {
+    background:linear-gradient(-20deg, #000000, #8a2be2);
+    /* Black-Purple gradient */
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    /* Modern font */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+/* Navbar customizations */
+.navbar {
+    padding: 1rem 1rem;
+    background: transparent;
+    /* Removes background color */
+}
+
+.navbar-nav .nav-item {
+    margin-right: 30px;
+    text-wrap: nowrap;
+    /* Increases space between navbar items */
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 1.1rem;
+    /* Slightly larger text */
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #beb7b7;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    border: 1px solid #ffffff!important;
+    border-radius: 2px;
+}
+/* Custom Hamburger Icon - Default color */
+.custom-navbar-toggler .navbar-toggler-icon {
+    background: none;
+    /* Remove the default background of the icon */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler:focus-visible {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: rgb(255, 255, 255) !important;
+    /* keeps default border */
+}
+
+
+/* Join Now Button */
+.join-now-btn {
+    background-color: #ff01b3;
+    /* Darker purple */
+    color: white;
+    border-radius: 50px;
+    padding: 15px 40px;
+    /* Adjust padding to increase button width */
+    font-size: 1.2rem;
+    /* Keep font size as it is */
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    min-width: 200px;
+    /* Ensure a minimum width */
+    max-width: 100%;
+    /* Ensure it can grow based on available space */
+}
+
+/* Hover effect */
+.join-now-btn:hover {
+    background-color: #ff0364;
+    /* Slightly darker on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    /* Increased shadow on hover */
+}
+
+/* Content section styling */
+.container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Optional: Additional styling for responsiveness */
+@media (max-width: 767px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+/* About Section Styling */
+.about {
+    padding: 50px 0;
+}
+
+.about h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+    text-align: center;
+    color: #e21a88;
+    font-weight: bolder;
+    margin-top: -20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Button Styling */
+.btn-danger {
+    background-color: #f50057;
+    color: white;
+    border-radius: 50px;
+    padding: 15px 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #e1004f;
+}
+
+/* Modal Styling */
+.modal-content {
+    background-color: #222;
+    color: white;
+}
+
+.modal-header {
+    border-bottom: 0;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+    .about h1 {
+        font-size: 2.2rem;
+        /* Slightly smaller for mobile */
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+        /* Slightly smaller for mobile */
+    }
+
+    .about p {
+        font-size: 1rem;
+    }
+
+    .btn-danger {
+        width: 100%;
+        padding: 15px 20px;
+        /* Adjust padding for smaller screens */
+    }
+}
+
+/* Presentation Section Styling */
+.presentation-section {
+    padding: 50px 0;
+    /* Black-Purple gradient */
+}
+
+/* Heading Styling */
+.presentation-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.presentation-section p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Box Styling */
+.box {
+    padding: 30px;
+    border-radius: 15px;
+    background: transparent;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensure the content is spaced evenly */
+}
+
+.box:hover {
+    transform: scale(1.05);
+    /* Slight hover effect */
+}
+
+.left-box {
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.right-box {
+    border: 2px solid transparent;
+    background-image: linear-gradient(to left, #ff13b0, #8a2be2);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+/* Table Styling */
+.table {
+    width: 100%;
+    color: white;
+    margin-top: 20px;
+    border: none;
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: separate;
+    border-spacing: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th,
+.table td {
+    text-align: center;
+    background-color: #2a1a56;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 2px solid #8a2be2;
+}
+
+.table thead {
+    background: #000000;
+}
+
+.table th {
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 2rem;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.table td {
+    background: linear-gradient(135deg, #8a2be2, #ff02c8);
+    /* Gradient for table rows */
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin: 2rem;
+}
+
+.table tbody tr:nth-child(even) td {
+    background: linear-gradient(135deg, #8a2be2, #ff02c8);
+    border-radius: 100px;
+    /* Slightly different gradient for alternate rows */
+}
+.table tbody tr:nth-child(odd) td {
+    background: linear-gradient(135deg, #8a2be2, #ff02c8);
+    border-radius: 100px;
+    /* Slightly different gradient for alternate rows */
+}
+
+.table tbody tr:hover {
+    background-color: #6a0dad;
+    /* Hover effect for rows */
+}
+
+/* Image Styling */
+.image-container {
+    text-align: center;
+}
+
+.image-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+.download-btn {
+    background-color: #fc0d55;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #9e1941;
+}
+
+/* Flexbox for equal height columns */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-lg-6 {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.box {
+    flex: 1;
+    /* Ensures both boxes take equal width */
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+    .presentation-section h1 {
+        font-size: 2.5rem;
+        /* Adjusting for smaller screens */
+    }
+
+    .presentation-section p {
+        font-size: 1rem;
+    }
+
+    .table th,
+    .table td {
+        font-size: 1rem;
+        /* Adjusting table font size for mobile */
+    }
+
+    .download-btn {
+        width: 100%;
+        padding: 15px 20px;
+        /* Adjust button size for mobile */
+    }
+}
+
+/* Team Profit Section Container */
+.team-profit-container {
+    padding: 50px 0;
+    /* Black-Purple gradient */
+}
+
+/* Team Profit Section Heading */
+.team-profit-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Team Profit Section Text */
+.team-profit-text {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Image Container Styling */
+.team-profit-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Download Button Styling */
+.team-profit-download-btn {
+    background-color: #fc0d55;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.team-profit-download-btn:hover {
+    background-color: #9e1941;
+}
+
+/* Center the Download Button */
+.team-profit-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Responsive Styling */
+@media (max-width: 767px) {
+    .team-profit-heading {
+        font-size: 2.5rem;
+        /* Adjusting for smaller screens */
+    }
+
+    .team-profit-text {
+        font-size: 1rem;
+    }
+
+    .team-profit-download-btn {
+        width: 100%;
+        padding: 15px 20px;
+        /* Adjust button size for mobile */
+    }
+}
+
+/* ========== Live Token Price Section ========== */
+
+.live-token-subtext {
+    font-size: 1rem;
+    color: #cfcfcf;
+}
+
+.live-token-image-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.live-token-image {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(121, 87, 255, 0.3);
+}
+
+.btn-live-token {
+    background: linear-gradient(to right, #ff0c7d, #8a2be2);
+    color: #fff;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-live-token:hover {
+    background: linear-gradient(90deg, #da34a2, #7a4ef2);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Result section */
+
+.result-card {
+    background: #12002b;
+    color: white;
+    background-clip: padding-box;
+    position: relative;
+}
+
+.border-gradient {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 10px;
+    border-image-source: linear-gradient(45deg, #a855f7, #00d0ff);
+}
+
+.result-name,
+.result-amount {
+    color: #a5b4fc;
+}
+
+.result-date {
+    color: #d1d5db;
+    font-size: 0.9rem;
+}
+
+.result-header-image {
+    height: 200px;
+    /* Adjust the height as needed */
+    width: auto;
+    /* Maintain aspect ratio */
+}
+
+
+/* Join Pop Max Section Styling */
+
+.join-box {
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-highlight {
+    color: #8a2be2;
+    /* Purple color for highlighted text */
+}
+
+.join-box h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.referral-code-box {
+    background-color: #1e1a2e;
+}
+
+.btn-copy {
+    background-color: #7a1f8f;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn-copy:hover {
+    background-color: #9a2eaa;
+}
+
+.pro-tip {
+    background-color: #3c004d;
+    padding: 15px;
+}
+
+.pro-tip img {
+    width: 50px;
+    height: 50px;
+}
+
+.pro-tip p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 767px) {
+    .join-box {
+        padding: 20px;
+    }
+
+    .pro-tip {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pro-tip img {
+        margin-bottom: 10px;
+    }
+}
+.join h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Connect Section */
+.connect-section-unique {
+    padding: 50px 0;
+}
+
+/* Heading */
+.connect-heading-unique {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.connect-subheading-unique {
+    font-size: 1.2rem;
+}
+
+/* Social Media Links */
+.social-links-container-unique {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    text-align: left;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    /* Distribute space between social links */
+    height: 100%;
+    /* Ensures equal height with the image container */
+}
+
+.social-link-box-unique {
+    display: flex;
+    align-items: center;
+    background: #2c1e48;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.social-link-box-unique:hover {
+    transform: scale(1.05);
+}
+
+.social-icon-unique {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.social-text-unique {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Right Box: Person Image */
+.person-image-container-unique {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*    transition: transform 0.3s ease;*/
+}
+/*.person-image-container-unique:hover {
+    transform: scale(1.08);
+}
+*/
+.person-image-unique {
+    width: 100%;
+    /* Ensure image is responsive */
+    height:auto;
+    object-fit: contain;
+    /* Ensure image is contained within the box */
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/* Call to Action */
+.download-btn-unique {
+    background: linear-gradient(135deg, #8a2be2, #00d0ff);
+    color: white;
+    padding: 12px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.download-btn-unique:hover {
+    background: linear-gradient(135deg, #7a1f8f, #00b2d1);
+}
+
+/* Ensure both the left and right boxes are the same height */
+.row {
+    display: flex;
+}
+
+.col-lg-6 {
+    display: flex;
+    align-items: stretch;
+    /* Ensures both columns take equal height */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 767px) {
+    .connect-heading-unique {
+        font-size: 2.5rem;
+    }
+
+    .connect-subheading-unique {
+        font-size: 1rem;
+    }
+
+    .social-links-container-unique {
+        gap: 15px;
+    }
+
+    .person-image-container-unique img {
+        width: 80%;
+        /* Scale image size for small screens */
+    }
+
+    .social-text-unique {
+        font-size: 0.9rem;
+    }
+}
+
+/* PopMax Content Section */
+.popmax-content {
+    padding-top: 50px 0;
+}
+
+
+.video-slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.video-slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    /* Smooth transition for looping */
+}
+
+.video-slide {
+    flex: 0 0 50%;
+    /* Each video takes up 50% of the container width */
+    padding: 0 10px;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+
+.youtube-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.youtube-button {
+    background-color: #ff0000;
+    color: white;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.youtube-button:hover {
+    background-color: #cc0000;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .video-slide {
+        flex: 0 0 100%;
+        /* Each video takes up 100% of the container width on smaller screens */
+    }
+
+    .popmax-heading {
+        font-size: 2em;
+    }
+
+    .youtube-button {
+        font-size: 1.2em;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .popmax-heading {
+        font-size: 1.5em;
+    }
+
+    .youtube-button {
+        font-size: 1em;
+    }
+}
+
+
+
+
+/* manual Css for all corrections*/
+.bold-text{
+    font-weight: bold;
+}
+.text-highlight {
+    color: #ff07c9;
+}
+.rounded-3 {
+    border-radius: 0 !important; 
+}
+
+/* youtube link responsive */
+.responsive-iframe-container {
+    position: relative;
+    padding-bottom: 50%;
+    /* Aspect ratio of 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.responsive-iframe {
+    width: 100%;      /* Ensures iframe takes full width of its parent */
+    height: 450px;     /* Height will adjust automatically based on width */
+    max-width: 560px; /* Maximum width of iframe */
+    max-height: 315px; /* Maximum height of iframe */
+    border-radius: 8px; /* Optional: for rounded corners */
+  }
+  
+  .no-underline {
+      text-decoration: none;
+      /* Removes underline from the link */
+  }
+
+  .about-title{
+    width: auto;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .custom-word-space{
+    word-spacing: 0.1rem;
+  }
+
+h1 *custom-word-space{
+    font-size: 6rem;
+    padding: 0rem;
+    margin: 0rem;
+  }
+  .about{
+    padding: 0;
+  }
+
+  /* Styling for the Steps to join*/
+  .join-steps {
+      font-size: 1.2rem;
+      /* Bigger text size */
+      line-height: 1.8;
+      /* Space between lines */
+      padding-left: 30px;
+      margin-top: 20px;
+      list-style: none;
+      /* Removes the default list styling */
+  }
+
+  /* Styling for each Step Number (Circle) */
+
+  /* Step Text Styling */
+  .join-steps .step-item {
+      margin-bottom: 0px;
+      font-size: 1.2 rem;
+      text-align: left;
+  }
+
+  /* Join Now Button Styling */
+  .download-btn {
+      background-color: #ff01b3;
+      color: white;
+      padding: 12px 40px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      border: none;
+      margin-top: 20px;
+  }
+
+  .download-btn:hover {
+      background-color: #ff0364;
+  }
+
+  /* Responsive Styling for smaller screens */
+  @media (max-width: 767px) {
+      .join-steps {
+          font-size: 1rem;
+          /* Smaller text size for smaller screens */
+      }
+
+      .step-number {
+          width: 30px;
+          height: 30px;
+          font-size: 1.2rem;
+          line-height: 30px;
+      }
+  }
+
+  .custom-p{
+    font-size: 1.2rem;
+  }
+
+
+/* Ensure both boxes have equal height */
+.row {
+    display: flex;
+    /* Enable flex layout */
+}
+
+.col-lg-6 {
+    display: flex;
+    flex-direction: column;
+}
+
+.join-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Distribute content evenly */
+    height: 100%;
+    /* Make sure each box takes up full height */
+}
+
+.right-box-join,
+.left-box-join {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Ensures equal height for content inside */
+}
+
+/* Logo Image Styling */
+.logo-img {
+    height: 50px;
+    /* Increase the logo size */
+    width: auto;
+    /* Ensure it maintains aspect ratio */
+}
+
+/* Make logo responsive */
+@media (max-width: 767px) {
+    .logo-img {
+        height: 80px;
+        /* Slightly reduce logo size for medium screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-img {
+        height: 70px;
+        /* Further reduce logo size for small screens */
+    }
+}
+
+.text-social-custom{
+    font-size: 1.5rem;
+}
+
+/* Styling for h1 in the About section */
+.about .h1-title h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin: 0;
+    margin-top: 0;
+    padding-top: 0;
+    width: 100%;
+    /* Make the h1 take full width */
+    display: block;
+}
+.h1-title{
+    margin-bottom: 0;
+}
+/* Ensure the paragraph text matches the video width */
+.custom-p-width{
+    word-spacing: 0.15rem;
+    font-size: 5rem;
+}
+.presentation-h1{
+    margin-bottom: 0;
+    margin: 0px;
+
+}
+.p-presentation{
+    margin: 0;
+    padding: 0;
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+
+/* Ensure responsiveness for small screens */
+/* Styling for the live token image */
+.live-token-image-wrapper {
+    display: flex;
+    justify-content: center;
+    /* Center the image */
+    align-items: center;
+    overflow: hidden;
+    /* Ensure the image doesn't overflow the container */
+}
+
+/* Live Token Image */
+.live-token-image {
+    width: 100%;
+    /* Make the image responsive */
+    max-width: 1200px;
+    /* Max width to limit its size */
+    height: auto;
+    /* Maintain aspect ratio */
+    border-radius: 15px;
+    /* Keep rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    /* Optional: Add shadow */
+    object-fit: contain;
+    /* Ensures the image does not get stretched */
+}
+
+/* Ensure responsiveness for small screens */
+@media (max-width: 767px) {
+    .live-token-image {
+        border-radius: 10px;
+        /* Keep the border radius intact for small screens */
+        max-width: 100%;
+        /* Ensure it takes up 100% width of the container */
+    }
+}
+
+/* Logo styling */
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        height: 45px;
+        /* Smaller logo on mobile */
+    }
+}
+
+/* Toggle Button top right */
+.navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1050;
+    border: none;
+}
+
+/* Center the navbar links on mobile */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        justify-content: center !important;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+/* Global background for all sections */
+
+        /* Navbar styling - Remove background color */
+.navbar {
+    background: none;
+}
+/* Unique Class for Custom Steps */
+.custom-steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Add gap between each step */
+    vertical-align: middle;
+}
+
+/* Step Item */
+.custom-step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    padding-right: 20px;
+    vertical-align: middle;
+}
+
+/* Step Number Circle */
+.custom-step-number {
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 18px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #ff0c7d;
+    color: white;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    line-height: 1.2rem;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+/* Step Text */
+.custom-step-text p {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-top: 10;
+    margin-bottom: 10px;
+    /* Optional, to control spacing between paragraphs */
+}
+
+.custom-bold {
+    font-weight: bold;
+}
+
+body {
+    background: linear-gradient(-20deg, #000000, #8a2be2);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.connect-section,
+.about,
+.presentation-section,
+.results-section,
+.any-other-section {
+    background: transparent !important;
+}
+.download-box-p{
+    margin: 25px !important;
+    font-size: 1.5rem !important;
+    margin-top: 0px !important;
+}
+
+/*mobile responsiveness/*
+
+/* Responsive Styling for small screens */
+@media (max-width: 767px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        /* Reduce font size */
+    }
+
+    .about h1 {
+        font-size: 2.2rem;
+        /* Slightly smaller for mobile */
+    }
+
+    .about h2 {
+        font-size: 1.8rem;
+        /* Slightly smaller for mobile */
+    }
+
+    .about p {
+        font-size: 1rem;
+        /* Adjust paragraph font size */
+    }
+
+    .btn-danger {
+        width: 100%;
+        padding: 15px 20px;
+        /* Adjust padding for smaller screens */
+    }
+
+    /* Adjust Join Now Button for small screens */
+    .join-now-btn {
+        font-size: 1rem;
+        padding: 12px 30px;
+        min-width: auto;
+    }
+
+    /* Adjust Table for mobile view */
+    .table th,
+    .table td {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust Presentation Section for small devices */
+    .presentation-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .presentation-section p {
+        font-size: 1rem;
+    }
+
+    .download-btn {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .team-profit-heading {
+        font-size: 2.5rem;
+        /* Smaller heading for mobile */
+    }
+
+    .team-profit-text {
+        font-size: 1rem;
+    }
+
+    .team-profit-download-btn {
+        width: 100%;
+        padding: 15px 20px;
+    }
+
+    .connect-heading-unique {
+        font-size: 2.5rem;
+    }
+
+    .connect-subheading-unique {
+        font-size: 1rem;
+    }
+
+    .social-text-unique {
+        font-size: 0.9rem;
+    }
+
+    .person-image-container-unique img {
+        width: 80%;
+        /* Scale image size for small screens */
+    }
+
+    .youtube-button {
+        font-size: 1.2em;
+    }
+
+    /* Adjust logo for small screens */
+    .logo-img {
+        height: 70px;
+    }
+
+    /* Adjust for smaller devices */
+    .custom-p-width {
+        font-size: 2rem;
+    }
+
+    .join-steps {
+        font-size: 1rem;
+        /* Adjust text size for smaller screens */
+    }
+
+    .step-number {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+
+    /* Adjust other elements on small screens */
+    .live-token-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .logo-img {
+        height: 45px;
+    }
+}
+/* Make buttons full width on small devices */
+/* Ensure buttons are full width on small screens */
+/* Ensure the button container and button are properly responsive */
+@media (max-width: 767px) {
+
+    .join-now-btn,
+    .btn-danger,
+    .download-btn,
+    .team-profit-download-btn,
+    .youtube-button,
+    .download-btn-unique {
+        width: 100% !important;
+        /* Force full width */
+        padding: 15px 20px;
+        /* Adjust padding */
+        box-sizing: border-box;
+        /* Ensure padding doesn't affect width */
+        text-align: center;
+        /* Center text */
+        font-size: 1rem;
+        /* Adjust font size if necessary */
+        border-radius: 8px;
+        /* Ensure rounded corners for smaller screens */
+    }
+
+    /* Add margin and padding adjustment to avoid overflow */
+    .container,
+    .join-now-btn,
+    .presentation-section,
+    .team-profit-container {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        /* Ensure the container takes full width */
+        box-sizing: border-box;
+        /* Make sure padding is accounted for */
+    }
+
+    .join-now-btn {
+        font-size: 1.1rem;
+        padding: 15px 20px;
+    }
+}
+/* Full width button adjustments for small screens */
+@media (max-width: 767px) {
+
+    .join-now-btn,
+    .btn-danger,
+    .download-btn,
+    .team-profit-download-btn,
+    .youtube-button,
+    .download-btn-unique {
+        width: 100% !important;
+        /* Force full width */
+        padding: 15px 20px;
+        /* Adjust padding */
+        box-sizing: border-box;
+        /* Ensure padding doesn't affect width */
+        text-align: center;
+        /* Center text */
+        font-size: 1rem;
+        /* Adjust font size */
+        border-radius: 8px;
+        /* Ensure rounded corners */
+        margin: 10px 0;
+        /* Avoid margin overlap */
+    }
+
+    /* Adjust the container for small screens */
+    .container,
+    .join-now-btn,
+    .presentation-section,
+    .team-profit-container {
+        width: 100%;
+        /* Ensure full width */
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        /* Prevent overflow */
+    }
+
+    /* Adjust heading and other text sizes */
+    .presentation-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .presentation-section p,
+    .team-profit-text {
+        font-size: 1rem;
+    }
+}
+
+/* Ensure the table looks good on small screens */
+
+.premium-content-link{
+    text-decoration: none;
+    color: #fc0d55;
+}
+.premium-content-link:hover{
+    color: #9e1941;
+}
+.custom-responsive-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto 20px;
+    /* Ensures the image has space below it */
+}
+
+/* Ensure the text is not overlapping */
+.clear-both {
+    clear: both;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .premium-content-link {
+        font-size: 1em;
+    }
+}

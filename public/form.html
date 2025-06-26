@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Access</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f3f4f6;
+      }
+      .container {
+        max-width: 90%;
+        margin: auto;
+        padding: 20px;
+      }
+      .form-input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+      .btn-primary {
+        width: 100%;
+        padding: 10px;
+        margin-top: 16px;
+        background-color: #4f46e5;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+      .error-message {
+        color: red;
+        margin-top: 8px;
+        font-size: 14px;
+      }
+      .spinner {
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #4f46e5;
+        border-radius: 50%;
+        width: 24px;
+        height: 24px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center min-h-screen">
+    <div
+      class="container bg-white p-8 rounded-lg shadow-xl border border-gray-200"
+    >
+      <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">
+        Pop Max Premium Content Unlocked!
+      </h1>
+
+      <!-- Message Box -->
+      <div id="messageBox" class="hidden message-box mb-4"></div>
+
+      <!-- Initial Form: Collect User Info -->
+      <div id="userInfoForm" class="space-y-4">
+        <p class="text-gray-600 text-center mb-6">
+          Enter your details to receive Premium access via email.
+        </p>
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            class="form-input"
+            placeholder="Your Full Name"
+            required
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="form-input"
+            placeholder="your.email@example.com"
+            required
+          />
+          <p id="emailError" class="error-message hidden">
+            Please enter a valid email address.
+          </p>
+        </div>
+        <div>
+          <label for="telegram" class="block text-sm font-medium text-gray-700"
+            >Telegram Username</label
+          >
+          <input
+            type="text"
+            id="telegram"
+            class="form-input"
+            placeholder="@yourtelegramhandle (optional)"
+          />
+        </div>
+        <button
+          id="submitBtn"
+          class="btn-primary w-full flex items-center justify-center"
+        >
+          <span id="submitText">Get Access To Premium Content Now</span>
+          <div id="submitSpinner" class="spinner ml-2 hidden"></div>
+        </button>
+      </div>
+
+      <!-- Success Message -->
+      <div
+        id="successMessage"
+        class="hidden text-center text-green-500 font-bold mt-4"
+      >
+        Please check your email to access the premium content. Thank you!
+      </div>
+    </div>
+
+    <script>
+      // Function to validate email format using regex
+      function validateEmail(email) {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        return emailRegex.test(email);
+      }
+
+      document
+        .getElementById("submitBtn")
+        .addEventListener("click", async (e) => {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const telegram = document.getElementById("telegram").value.trim();
+
+          // Show loading spinner
+          document.getElementById("submitText").classList.add("hidden");
+          document.getElementById("submitSpinner").classList.remove("hidden");
+
+          // Email validation
+          if (!validateEmail(email)) {
+            document.getElementById("emailError").classList.remove("hidden"); // Show error message
+            document.getElementById("submitText").classList.remove("hidden");
+            document.getElementById("submitSpinner").classList.add("hidden");
+            return; // Stop further form submission
+          } else {
+            document.getElementById("emailError").classList.add("hidden"); // Hide error message if email is valid
+          }
+
+          // Send form data to the backend (server.js) to save in Excel
+          try {
+            const response = await fetch("http://localhost:3000/submit-form", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name, email, telegram }),
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+              // Hide the form and show the success message
+              document.getElementById("userInfoForm").classList.add("hidden");
+              document
+                .getElementById("successMessage")
+                .classList.remove("hidden");
+            } else {
+              alert(data.message); // Error message
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert("An error occurred while submitting the form.");
+          } finally {
+            // Hide the spinner and restore button text
+            document.getElementById("submitText").classList.remove("hidden");
+            document.getElementById("submitSpinner").classList.add("hidden");
+          }
+        });
+    </script>
+  </body>
+</html>
